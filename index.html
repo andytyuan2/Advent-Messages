@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>90 Days</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  /* ============================================================
+     EDIT ME: your settings live here
+     ============================================================ */
+
+  /* (JS config is further down the file, search for CONFIG) */
+
+  :root{
+    --cream: #FBF2E7;
+    --paper: #FFFCF6;
+    --ink: #4A3B32;
+    --ink-soft: #8A7566;
+    --rose: #C97B63;
+    --rose-soft: #EAC3B3;
+    --sage: #8A9B7C;
+    --sage-soft: #D9E2CF;
+    --gold: #D9A441;
+    --shadow: rgba(74, 59, 50, 0.18);
+  }
+
+  *{ box-sizing: border-box; }
+
+  body{
+    margin:0;
+    min-height:100vh;
+    background:
+      radial-gradient(circle at 15% 10%, rgba(217,164,65,0.10), transparent 40%),
+      radial-gradient(circle at 85% 85%, rgba(138,155,124,0.12), transparent 45%),
+      var(--cream);
+    font-family: 'Quicksand', sans-serif;
+    color: var(--ink);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding: 48px 20px 80px;
+  }
+
+  .title{
+    font-family:'Caveat', cursive;
+    font-weight:700;
+    font-size: clamp(2.6rem, 6vw, 4.2rem);
+    margin: 0 0 4px;
+    color: var(--rose);
+    text-align:center;
+    line-height:1;
+  }
+
+  .subtitle{
+    font-size: 1rem;
+    color: var(--ink-soft);
+    margin: 0 0 40px;
+    text-align:center;
+    max-width: 420px;
+  }
+
+  /* ---- hero card / envelope ---- */
+
+  .stage{
+    perspective: 1400px;
+    width: 100%;
+    max-width: 480px;
+    margin-bottom: 56px;
+  }
+
+  .card{
+    position:relative;
+    background: var(--paper);
+    border-radius: 18px;
+    padding: 40px 32px 36px;
+    box-shadow: 0 14px 32px var(--shadow);
+    border: 1px solid rgba(74,59,50,0.06);
+    min-height: 220px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+  }
+
+  .card.flip{ animation: flipIn 0.55s ease; }
+  @keyframes flipIn{
+    0%   { transform: rotateX(90deg); opacity: 0; }
+    60%  { transform: rotateX(-8deg); opacity: 1; }
+    100% { transform: rotateX(0deg); }
+  }
+
+  .card .day-label{
+    font-family:'Caveat', cursive;
+    font-size: 1.6rem;
+    color: var(--sage);
+    margin-bottom: 14px;
+  }
+
+  .card .message{
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: var(--ink);
+    white-space: pre-wrap;
+  }
+
+  .card .hint{
+    margin-top: 18px;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+  }
+
+  .doodle{
+    position:absolute;
+    opacity:0.55;
+  }
+  .doodle.heart{ top:-14px; left:-14px; width:34px; }
+  .doodle.star{ bottom:-12px; right:-10px; width:30px; }
+
+  /* ---- grid ---- */
+
+  .grid-wrap{
+    width:100%;
+    max-width: 640px;
+  }
+
+  .grid-label{
+    font-family:'Caveat', cursive;
+    font-size: 1.4rem;
+    color: var(--ink-soft);
+    margin: 0 0 14px 4px;
+  }
+
+  .grid{
+    display:grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 8px;
+  }
+
+  @media (max-width: 520px){
+    .grid{ grid-template-columns: repeat(6, 1fr); }
+  }
+
+  .tile{
+    aspect-ratio: 1;
+    border-radius: 9px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Quicksand', sans-serif;
+    font-weight:600;
+    font-size: 0.78rem;
+    cursor: default;
+    user-select:none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    border: 1px solid transparent;
+  }
+
+  .tile.locked{
+    background: rgba(138,117,102,0.08);
+    color: rgba(138,117,102,0.55);
+  }
+
+  .tile.unlocked{
+    background: var(--rose-soft);
+    color: var(--ink);
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(201,123,99,0.25);
+  }
+
+  .tile.unlocked:hover{
+    transform: translateY(-2px);
+  }
+
+  .tile.today{
+    background: var(--gold);
+    color: var(--paper);
+    box-shadow: 0 3px 10px rgba(217,164,65,0.45);
+  }
+
+  .tile.active{
+    outline: 2px solid var(--rose);
+    outline-offset: 2px;
+  }
+
+  footer{
+    margin-top: 56px;
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    text-align:center;
+  }
+
+</style>
+</head>
+<body>
+
+  <h1 class="title" id="titleText">90 little notes</h1>
+  <p class="subtitle" id="subtitleText">One for every day, until I run out of days to miss you less.</p>
+
+  <div class="stage">
+    <div class="card" id="card">
+      <svg class="doodle heart" viewBox="0 0 24 24" fill="none" stroke="#C97B63" stroke-width="1.6"><path d="M12 20s-7-4.5-9.5-9C.5 7 2.5 3 6.5 3c2 0 3.5 1.2 4.5 2.6C12 4.2 13.5 3 15.5 3 19.5 3 21.5 7 19.5 11 17 15.5 12 20 12 20z"/></svg>
+      <div class="day-label" id="dayLabel">Day 1</div>
+      <div class="message" id="messageText">Loading…</div>
+      <svg class="doodle star" viewBox="0 0 24 24" fill="none" stroke="#D9A441" stroke-width="1.6"><path d="M12 2l2.2 6.8H21l-5.6 4.1 2.1 6.9L12 15.9 6.5 19.8l2.1-6.9L3 8.8h6.8z"/></svg>
+    </div>
+  </div>
+
+  <div class="grid-wrap">
+    <p class="grid-label">tap any open day to read it again</p>
+    <div class="grid" id="grid"></div>
+  </div>
+
+  <footer>made with love, one day at a time</footer>
+
+<script>
+
+  /* ============================================================
+     CONFIG — edit these three things before you publish
+     ============================================================ */
+  const CONFIG = {
+    // Her IANA timezone name — this is what makes the calendar unlock
+    // at midnight HER time, no matter where either of you actually are.
+    // Examples: 'America/Toronto', 'America/New_York', 'Europe/London',
+    // 'Europe/Madrid', 'Asia/Tokyo'. Full list: look up "IANA timezone list".
+    timezone: 'America/Toronto',
+
+    // The first day the calendar should unlock, in YYYY-MM-DD format.
+    // Day 1 unlocks on this date (her time), day 2 the next day, etc.
+    startDate: '2026-10-01',
+
+    // Shown in the title/subtitle up top — optional personal touches.
+    title: '90 little notes',
+    subtitle: 'One for every day, until I run out of days to miss you less.'
+  };
+
+  /* ============================================================
+     YOUR 90 MESSAGES — replace every line below with your own.
+     Keep exactly 90 entries, in order, day 1 first.
+     ============================================================ */
+  const MESSAGES = Array.from({length: 90}, (_, i) =>
+    `Replace this with your message for day ${i + 1}.`
+  );
+
+  /* ============================================================
+     Logic — you shouldn't need to touch anything below this line
+     ============================================================ */
+
+  document.getElementById('titleText').textContent = CONFIG.title;
+  document.getElementById('subtitleText').textContent = CONFIG.subtitle;
+
+  function todayInTZ(tz){
+    const fmt = new Intl.DateTimeFormat('en-CA', {
+      timeZone: tz, year: 'numeric', month: '2-digit', day: '2-digit'
+    });
+    return fmt.format(new Date()); // -> "YYYY-MM-DD"
+  }
+
+  function daysBetween(a, b){
+    const [ay, am, ad] = a.split('-').map(Number);
+    const [by, bm, bd] = b.split('-').map(Number);
+    const da = Date.UTC(ay, am - 1, ad);
+    const db = Date.UTC(by, bm - 1, bd);
+    return Math.round((db - da) / 86400000);
+  }
+
+  const todayStr = todayInTZ(CONFIG.timezone);
+  const dayIndex = daysBetween(CONFIG.startDate, todayStr) + 1; // 1-based
+
+  const grid = document.getElementById('grid');
+  const card = document.getElementById('card');
+  const dayLabel = document.getElementById('dayLabel');
+  const messageText = document.getElementById('messageText');
+
+  let activeTile = null;
+
+  function showDay(n, tileEl){
+    dayLabel.textContent = `Day ${n}`;
+    messageText.textContent = MESSAGES[n - 1];
+    card.classList.remove('flip');
+    void card.offsetWidth; // restart animation
+    card.classList.add('flip');
+    if(activeTile) activeTile.classList.remove('active');
+    if(tileEl){ tileEl.classList.add('active'); activeTile = tileEl; }
+  }
+
+  for(let n = 1; n <= 90; n++){
+    const tile = document.createElement('div');
+    tile.className = 'tile';
+    tile.textContent = n;
+
+    if(n > dayIndex){
+      tile.classList.add('locked');
+    } else if(n === dayIndex){
+      tile.classList.add('today');
+      tile.addEventListener('click', () => showDay(n, tile));
+    } else {
+      tile.classList.add('unlocked');
+      tile.addEventListener('click', () => showDay(n, tile));
+    }
+    grid.appendChild(tile);
+  }
+
+  if(dayIndex < 1){
+    dayLabel.textContent = 'not yet';
+    messageText.textContent = `Come back on ${CONFIG.startDate} for day one 💛`;
+  } else if(dayIndex > 90){
+    dayLabel.textContent = 'day 90';
+    showDay(90, null);
+    const hint = document.createElement('div');
+    hint.className = 'hint';
+    hint.textContent = 'that was the last one — but not the last of anything else.';
+    card.appendChild(hint);
+  } else {
+    const todaysTile = grid.children[dayIndex - 1];
+    showDay(dayIndex, todaysTile);
+  }
+
+</script>
+</body>
+</html>
