@@ -23,35 +23,35 @@
 23. "The way I can spoil your friends on your behalf, I love.",
 24. "The way we can be vulnerable with each other, I love.",
 25. "The way you take things day by day, I love.",
-26. "The way you have me craving to be locked up, I love.",
+26. "Happy 1 year anniversary my love! I'm so grateful for everything we've done together and looking forward to what we'll do in the future :)",
 27. "The way we've expressed interest in each others' hobbies, I love.",
 28. "The way you place emphasis on no clutter, I love.",
 29. "The way we both have a sweet tooth, I love.",
 30. "The way you keep me accountable, I love.",
-31. "
-32. "
-33. "
-34. "
-35. "
-36. "
-37. "
-38. "The way we choose each other every day, I love."
-39. "
-40. "
-41. "
-42. "
-43. "
-44. "
-45. "
-46. "
-47. "
-48. ""
-49. "
-50. "
-51. "
+31. "The way you have a deep appreciation for everything, I love.",
+32. "The way I know your favourites, I love.",
+33. "The way you light up the room, I love.",
+34. "The way we brainstorm to face things, I love.",
+35. "The way you've warmed up to surprises, I love.",
+36. "The way I give you true devotion and no lip service, I love.",
+37. "The way we can be each others' calm, I love.",
+38. "The way we choose each other every day, I love.",
+39. "The way I see you in the everyday little things, I love.",
+40. "The way your curves flow seamlessly across your body, I love.",
+41. "The way you let me take the first step towards something new, I love.",
+42. "The way you support me through those first steps, I love.",
+43. "The way we create for each other, I love.",
+44. "The way we're a wait-and-see, not a react now couple, I love.",
+45. "The way you feel safe with me, I love.",
+46. "The way you're so open minded, I love.",
+47. "The way you have me craving to be locked up, I love.",
+48. "The way I keep being finding new parts of you, I love.",
+49. "The way we don't waver for each other, I love.",
+50. "The way our heads can clear for each other, I love.",
+51. "The way our levels of skepticism complement each other, I love.",
 52. "
 53. "
-54. "The way my hands will fit your body perfectly, I love."
+54. "The way my hands will fit your body perfectly, I love.",
 55. "
 56. "
 57. "
@@ -66,7 +66,7 @@
 66. "
 67. "
 68. "
-69. "The way I feel my body needing you, I love."
+69. "The way I feel my body needing you, I love.",
 70. "
 71. "
 72. "
@@ -74,7 +74,7 @@
 74. "
 75. "
 76. "
-77. "
+77. "The way our words have had so much effect on each other, I love.",
 78. "
 79. "
 80. "
@@ -82,7 +82,7 @@
 82. "
 83. "
 84. "
-85. ""
+85. "
 86. "
 87. "
 88. "
