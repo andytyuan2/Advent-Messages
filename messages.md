@@ -49,10 +49,10 @@
 49. "The way we don't waver for each other, I love.",
 50. "The way our heads can clear for each other, I love.",
 51. "The way our levels of skepticism complement each other, I love.",
-52. "
-53. "
+52. "The way we embrace the arts, I love.",
+53. "The way we want to try new things, I love.",
 54. "The way my hands will fit your body perfectly, I love.",
-55. "
+55. "The way you see the best in everything, I love."
 56. "
 57. "
 58. "
