@@ -40,7 +40,7 @@
 40. "The way your curves flow seamlessly across your body, I love.",
 41. "The way you let me take the first step towards something new, I love.",
 42. "The way you support me through those first steps, I love.",
-43. "The way we create for each other, I love.",
+43. "The way we create opportunity for each other, I love.",
 44. "The way we're a wait-and-see, not a react now couple, I love.",
 45. "The way you feel safe with me, I love.",
 46. "The way you're so open minded, I love.",
@@ -52,24 +52,24 @@
 52. "The way we embrace the arts, I love.",
 53. "The way we want to try new things, I love.",
 54. "The way my hands will fit your body perfectly, I love.",
-55. "The way you see the best in everything, I love."
-56. "
-57. "
-58. "
+55. "The way you see the best in everything, I love.",
+56. "The way you always know the best spots, I love.",
+57. "The way you've invited me into your life, I love.",
+58. "The way you take words seriously, I love.",
 59. "The way you keep my ass filled...I love.",
-60. "
-61. "
-62. "
+60. "The way we can talk about anything with wonder, I love.",
+61. "The way you communicate clearly, I love.",
+62. "The way you tell me to be patient, I love.",
 63. "The way your taste is so diverse, I love.",
-64. "
-65. "
-66. "The way I'm so grateful you've come into my life, I love.",
+64. "The way I can bring you clarity, I love.",
+65. "The way there's always an event to look forward to, I love.",
+66. "The way I wake up grateful you've come into my life, I love.",
 67. "
 68. "
 69. "The way I feel my body needing you, I love.",
 70. "
 71. "
-72. "
+72. "The way you tease me, I love",
 73. "
 74. "
 75. "
@@ -77,21 +77,21 @@
 77. "The way our words have had so much effect on each other, I love.",
 78. "
 79. "
-80. "
+80. "The way you believe in me yet keep me grounded, I love.",
 81. "
 82. "
 83. "
-84. "
+84. "The way you trained me, I love.",
 85. "
 86. "
 87. "
-88. "
+88. "The way I'll take the best pictures of you, I love.",
 89. "
 90. "
-91. "
+91. "The way I'll have a full gift box waiting for you, I love.",
 92. "
 93. "
-94. "
+94. "The way you push me to creating so much for you, I love.",
 95. "
 96. "
 97. "
