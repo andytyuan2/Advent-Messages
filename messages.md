@@ -56,14 +56,14 @@
 56. "
 57. "
 58. "
-59. "
+59. "The way you keep my ass filled...I love.",
 60. "
 61. "
 62. "
-63. "
+63. "The way your taste is so diverse, I love.",
 64. "
 65. "
-66. "
+66. "The way I'm so grateful you've come into my life, I love.",
 67. "
 68. "
 69. "The way I feel my body needing you, I love.",
