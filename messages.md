@@ -67,12 +67,12 @@
 67. "The way you critique film, I love.",
 68. "The way we can have differing opinions, I love.",
 69. "The way I feel my body needing you, I love.",
-70. "
-71. "
+70. "The way you've taught me how to love you, I love."
+71. "The way you stay humble, I love.",
 72. "The way you tease me, I love",
-73. "
-74. "
-75. "
+73. "The way you accept my faults, I love.",
+74. "The way you feel safe to open up, I love.",
+75. "The way 
 76. "
 77. "The way our words have had so much effect on each other, I love.",
 78. "
@@ -83,7 +83,7 @@
 83. "
 84. "The way you trained me, I love.",
 85. "
-86. "
+86. "The way you challenge me to be better, I love.",
 87. "
 88. "The way I'll take the best pictures of you, I love.",
 89. "
