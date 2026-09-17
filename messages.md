@@ -64,8 +64,8 @@
 64. "The way I can bring you clarity, I love.",
 65. "The way there's always an event to look forward to, I love.",
 66. "The way I wake up grateful you've come into my life, I love.",
-67. "
-68. "
+67. "The way you critique film, I love.",
+68. "The way we can have differing opinions, I love.",
 69. "The way I feel my body needing you, I love.",
 70. "
 71. "
