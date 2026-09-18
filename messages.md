@@ -73,21 +73,21 @@
 73. "The way you accept my faults, I love.",
 74. "The way you feel safe to open up, I love.",
 75. "The way you open your secrets to me, I love.",
-76. "
+76. "The way you smile deeply, I love.",
 77. "The way our words have had so much effect on each other, I love.",
-78. "
-79. "
+78. "The way you try to curate your recommendations, I love.",
+79. "The way we'll hike all day and come back to a cozy show with some good food, I love.",
 80. "The way you believe in me yet keep me grounded, I love.",
-81. "
-82. "
-83. "
-84. "The way you trained me, I love.",
-85. "
+81. "The way every new experience becomes a new favourite, I love.",
+82. "The way what is mine is yours, I love.",
+83. "The way you know how to step back and apologize, I love.",
+84. "The way you trained me in....ways, I love.",
+85. "The way you can center me, I love.",
 86. "The way you challenge me to be better, I love.",
-87. "
+87. "The way you put the best into every day, I love.",
 88. "The way I'll take the best pictures of you, I love.",
-89. "
-90. "
+89. "The way I'm learning how to tell you how important you are more often, I love.",
+90. "The way you aren't materialistic, I love.",
 91. "The way I'll have a full gift box waiting for you, I love.",
 92. "
 93. "
