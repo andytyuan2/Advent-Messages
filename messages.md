@@ -72,7 +72,7 @@
 72. "The way you tease me, I love",
 73. "The way you accept my faults, I love.",
 74. "The way you feel safe to open up, I love.",
-75. "The way 
+75. "The way you open your secrets to me, I love.",
 76. "
 77. "The way our words have had so much effect on each other, I love.",
 78. "
