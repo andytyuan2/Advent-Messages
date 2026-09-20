@@ -96,5 +96,5 @@
 96. "The way you love a live message at events, I love.",
 97. "The way you sparkle when you're excited, I love.",
 98. "The way you're beautiful inside and out, I love.",
-99. "The way this many words isn't nearly enough."
+99. "The way this many words isn't nearly enough.",
 100. "To the rest of our lives :)"
