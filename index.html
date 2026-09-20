@@ -102,7 +102,11 @@
     font-size: 1.6rem;
     color: var(--sage);
     margin-bottom: 14px;
-  }.date-label{font-size: 0.85rem; color:var(--ink-soft); margin-bottom: 16px;}
+  }.date-label{
+    font-size: 0.85rem; 
+    color:var(--ink-soft); 
+    margin-bottom: 16px;
+  }
 
   .card .message{
     font-size: 1.15rem;
@@ -372,18 +376,6 @@
     return Math.round((db - da) / 86400000);
   }
 
-  const todayStr = todayInTZ(CONFIG.timezone);
-  const dayIndex = daysBetween(CONFIG.startDate, todayStr) + 1; // 1-based
-
-  const grid = document.getElementById('grid');
-  const card = document.getElementById('card');
-  const dayLabel = document.getElementById('dayLabel');
-  const messageText = document.getElementById('messageText');
-  const hintText = document.getElementById('hintText');
-  const dateLabel = document.getElementById('dateLabel');
-
-  let activeTile = null;
-
   function formatDateForDay(n){
     const [y, m, d] = CONFIG.startDate.split('-').map(Number);
     const dateObj = new Date(Date.UTC(y, m - 1, d));
@@ -391,11 +383,23 @@
     return dateObj.toLocaleDateString('en-US', { timeZone: 'UTC', month: 'long', day: 'numeric', year: 'numeric' });
   }
 
+  const todayStr = todayInTZ(CONFIG.timezone);
+  const dayIndex = daysBetween(CONFIG.startDate, todayStr) + 1; // 1-based
+
+  const grid = document.getElementById('grid');
+  const card = document.getElementById('card');
+  const dayLabel = document.getElementById('dayLabel');
+  const dateLabel = document.getElementById('dateLabel');
+  const messageText = document.getElementById('messageText');
+  const hintText = document.getElementById('hintText');
+
+  let activeTile = null;
+
   function showDay(n, tileEl){
     dayLabel.textContent = `Day ${n}`;
     dateLabel.textContent = formatDateForDay(n);
     messageText.textContent = MESSAGES[n - 1];
-    hintText.textContent = (dayIndex > 100 && n === 100)
+    hintText.textContent = (dayIndex > 90 && n === 90)
       ? 'that was the last one — but not the last of anything else.'
       : '';
     card.classList.remove('flip');
@@ -409,7 +413,7 @@
     const tile = document.createElement('div');
     tile.className = 'tile';
     tile.textContent = n;
-
+  
     if(n > dayIndex){
       tile.classList.add('locked');
     } else if(n === dayIndex){
@@ -424,12 +428,12 @@
 
   if(dayIndex < 1){
     dayLabel.textContent = 'not yet';
+    dateLabel.textContent = '';
     messageText.textContent = `Come back on ${CONFIG.startDate} for day one 💛`;
   } else if(dayIndex > 100){
-    showday(100, grid.children[99]);
+    showDay(100, grid.children[99]);
   } else {
-    const todaysTile = grid.children[dayIndex - 1];
-    showDay(dayIndex, todaysTile);
+    showDay(dayIndex, grid.children[dayIndex - 1]);
   }
 
 </script>
