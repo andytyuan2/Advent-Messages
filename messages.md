@@ -89,12 +89,12 @@
 89. "The way I'm learning how to tell you how important you are more often, I love.",
 90. "The way you aren't materialistic, I love.",
 91. "The way I'll have a full gift box waiting for you, I love.",
-92. "
-93. "
+92. "The way I'm so delighted to see your message, I love.",
+93. "The way you get mesmerized by my sluttiness, I love.",
 94. "The way you push me to creating so much for you, I love.",
-95. "
-96. "
-97. "
-98. "
-99. "
+95. "The way we can see eye to eye, I love.",
+96. "The way you love a live message at events, I love.",
+97. "The way you sparkle when you're excited, I love.",
+98. "The way you're beautiful inside and out, I love.",
+99. "The way this many words isn't nearly enough."
 100. "To the rest of our lives :)"
